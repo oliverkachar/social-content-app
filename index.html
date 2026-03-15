@@ -3,58 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SocialSpark - Social Media Content Generator</title>
+  <title>Social Pilot AI</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page">
-    <div class="app-card">
-      <div class="header">
-        <h1>SocialSpark</h1>
-        <p>Create ready-to-post social media content in seconds.</p>
+  <header class="navbar">
+    <div class="brand">Social Pilot AI</div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#generator">Generator</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <span class="badge">AI-powered social content creation</span>
+        <h1>Create social media content in seconds.</h1>
+        <p>
+          Social Pilot AI helps creators, freelancers, and businesses generate
+          better captions, hooks, hashtags, and calls to action for Instagram,
+          LinkedIn, and X.
+        </p>
+        <div class="hero-actions">
+          <a href="#generator" class="primary-btn">Try the Generator</a>
+          <a href="#features" class="secondary-btn">See Features</a>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="topic">Topic</label>
-        <textarea id="topic" placeholder="Example: New coffee shop opening in Dubai"></textarea>
+      <div class="hero-card">
+        <div class="mini-window">
+          <div class="mini-top">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mini-body">
+            <p class="mini-label">Example Output</p>
+            <h3>Launch your next post faster</h3>
+            <p>
+              Turn simple ideas into polished social posts with strong hooks,
+              engaging captions, and relevant hashtags.
+            </p>
+            <div class="mini-tags">
+              <span>Instagram</span>
+              <span>LinkedIn</span>
+              <span>X</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <div class="section-heading">
+        <h2>Built for speed, clarity, and growth</h2>
+        <p>
+          Everything you need to go from rough idea to publish-ready content.
+        </p>
       </div>
 
-      <div class="grid">
-        <div class="form-group">
-          <label for="platform">Platform</label>
-          <select id="platform">
-            <option value="instagram">Instagram</option>
-            <option value="linkedin">LinkedIn</option>
-            <option value="twitter">X / Twitter</option>
-          </select>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Multi-platform output</h3>
+          <p>Generate content tailored for Instagram, LinkedIn, and X.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Multiple tones</h3>
+          <p>Switch between professional, friendly, bold, and funny styles.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Ready-to-use structure</h3>
+          <p>Get a hook, caption, hashtags, and a call to action instantly.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fast workflow</h3>
+          <p>Create, copy, and reuse content without wasting time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="generator" class="generator-section">
+      <div class="generator-card">
+        <div class="generator-header">
+          <div>
+            <h2>Content Generator</h2>
+            <p>Generate polished social content from a simple topic.</p>
+          </div>
+          <span class="status-pill">MVP</span>
         </div>
 
         <div class="form-group">
-          <label for="tone">Tone</label>
-          <select id="tone">
-            <option value="professional">Professional</option>
-            <option value="friendly">Friendly</option>
-            <option value="bold">Bold</option>
-            <option value="funny">Funny</option>
-          </select>
+          <label for="topic">Topic</label>
+          <textarea id="topic" placeholder="Example: New fitness coaching program for busy professionals"></textarea>
+        </div>
+
+        <div class="grid">
+          <div class="form-group">
+            <label for="platform">Platform</label>
+            <select id="platform">
+              <option value="instagram">Instagram</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="twitter">X / Twitter</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tone">Tone</label>
+            <select id="tone">
+              <option value="professional">Professional</option>
+              <option value="friendly">Friendly</option>
+              <option value="bold">Bold</option>
+              <option value="funny">Funny</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button class="primary-btn btn-full" onclick="generateContent()">Generate Content</button>
+          <button class="secondary-btn btn-full" onclick="copyContent()">Copy Output</button>
+        </div>
+
+        <div class="output-card">
+          <div class="output-top">
+            <h3>Generated Output</h3>
+            <span id="statusMessage"></span>
+          </div>
+          <div id="output">Your generated content will appear here.</div>
         </div>
       </div>
+    </section>
 
-      <div class="actions">
-        <button id="generateBtn" onclick="generateContent()">Generate Content</button>
-        <button id="copyBtn" class="secondary-btn" onclick="copyContent()">Copy Output</button>
+    <section id="pricing" class="pricing-section">
+      <div class="section-heading">
+        <h2>Simple pricing for future growth</h2>
+        <p>This is placeholder pricing for your future SaaS version.</p>
       </div>
 
-      <div class="output-card">
-        <div class="output-header">
-          <h2>Generated Content</h2>
-          <span id="statusMessage"></span>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <ul>
+            <li>Basic generation</li>
+            <li>Limited daily use</li>
+            <li>3 platforms</li>
+          </ul>
+          <button class="secondary-btn btn-full">Current Plan</button>
         </div>
-        <div id="output">Your generated content will appear here.</div>
-      </div>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
+        <div class="pricing-card featured-plan">
+          <h3>Pro</h3>
+          <p class="price">$19/mo</p>
+          <ul>
+            <li>Unlimited generations</li>
+            <li>Premium content styles</li>
+            <li>Saved history</li>
+          </ul>
+          <button class="primary-btn btn-full">Upgrade Soon</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Team</h3>
+          <p class="price">$49/mo</p>
+          <ul>
+            <li>Team access</li>
+            <li>Brand voice presets</li>
+            <li>Advanced workflow tools</li>
+          </ul>
+          <button class="secondary-btn btn-full">Coming Soon</button>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
+<script src="script.js"></script>
 </html>
