@@ -1,0 +1,8 @@
+{
+  "name": "social-content-app",
+  "version": "1.0.0",
+  "description": "Social Pilot AI web app",
+  "dependencies": {
+    "openai": "^5.12.2"
+  }
+}
