@@ -35,7 +35,7 @@ function generateContent() {
     caption = `📸 ${topic}
 
 ${hook}
-This is your moment to grab attention, build interest, and connect with your audience in a simple but effective way.
+This is your chance to stop the scroll, spark curiosity, and connect with your audience in a memorable way.
 
 ${callToAction}`;
 
@@ -46,7 +46,7 @@ ${callToAction}`;
     caption = `🚀 ${topic}
 
 ${hook}
-Strong ideas deserve clear communication. A simple message can create real engagement, spark discussions, and build credibility.
+Clear communication creates stronger engagement. A well-positioned post can build trust, spark conversations, and strengthen your brand presence.
 
 ${callToAction}`;
 
@@ -57,7 +57,7 @@ ${callToAction}`;
     caption = `${topic}
 
 ${hook}
-Keep it simple. Keep it sharp. Keep it memorable.
+Keep it clear. Keep it sharp. Keep it shareable.
 
 ${callToAction}`;
 
