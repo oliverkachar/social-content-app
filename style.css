@@ -300,8 +300,10 @@ label {
   font-size: 14px;
 }
 
+/* Textarea, select, and input all match */
 textarea,
-select {
+select,
+input {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
@@ -317,12 +319,14 @@ textarea {
   resize: vertical;
 }
 
-textarea::placeholder {
+textarea::placeholder,
+input::placeholder {
   color: #8fa1b5;
 }
 
 textarea:focus,
-select:focus {
+select:focus,
+input:focus {
   border-color: #818cf8;
   box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
 }
@@ -386,12 +390,20 @@ select option {
 #statusMessage {
   color: #86efac;
   font-size: 13px;
+  font-weight: 700;
+  min-width: 140px;
+  text-align: right;
 }
 
-#output {
+#output,
+#authMessage {
   white-space: pre-wrap;
   line-height: 1.8;
   color: #dbe7f3;
+  min-height: 60px;
+}
+
+#output {
   min-height: 150px;
 }
 
@@ -468,8 +480,15 @@ select option {
   }
 
   .action-row,
-  .generator-header {
+  .generator-header,
+  .output-top {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #statusMessage {
+    text-align: left;
+    min-width: auto;
   }
 
   .featured-plan {
